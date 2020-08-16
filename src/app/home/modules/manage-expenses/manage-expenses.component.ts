@@ -15,6 +15,7 @@ export class ManageExpensesComponent implements OnInit {
   @Output() expenseList: EventEmitter<any> = new EventEmitter<any>();
 
   public pickMonth: any;
+  public month: string;
   public pickYear: any;
   public expenseModel: ExpenseModel;
 
@@ -33,10 +34,15 @@ export class ManageExpensesComponent implements OnInit {
   ngOnInit() {
     this.pickMonth = '8';
     this.pickYear = '2020';
+    if (this.pickMonth === '8') {
+      this.month = 'August';
+    }
   }
 
   selectionHandler() {
-
+    if (this.pickMonth === '8') {
+      this.month = 'August';
+    }
   }
 
   openExpenseModal() {

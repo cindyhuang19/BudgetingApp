@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-achievements',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AchievementsComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public router: Router
+  ) { }
 
   ngOnInit() {
+  }
+
+  backToOptions() {
+    this.router.navigate(['home/main']);
   }
 
 }

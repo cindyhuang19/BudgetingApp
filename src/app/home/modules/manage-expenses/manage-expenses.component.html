@@ -1,6 +1,6 @@
 <div class="bodyContainer">
-    <h1 class="blueText" style="margin-top:50px; margin-bottom:35px"> Manage Expenses </h1>
-    <div class="btn-group" style="margin-bottom: 20px;">
+    <h1 class="blueText" style="margin-top:50px; margin-bottom:10px"> Manage Expenses </h1>
+    <div class="btn-group">
         <form>
             <div class="form-group btn">
                 <label for="month" style="float:left;"> Month: </label>
@@ -34,8 +34,8 @@
     <div class="card bg-light" style="margin: 10px;">
         <div class="card-body">
             <div class="blackTextSm card-header"> 
-                <span style="margin-right: 470px"> Expenses for August 2020 </span>
-                <button class="addBtn rounded-pill btn btn-sm" style="margin: 20px;" type="button" (click)="openExpenseModal()"> Add Expense </button>
+                <span style="margin-right: 470px"> Expenses for {{month}} {{pickYear}} </span>
+                <button class="addBtn rounded-pill btn btn-sm" style="margin: 0;" type="button" (click)="openExpenseModal()"> Add Expense </button>
             </div>
             <br>
             <div *ngFor="let expense of expenses">

@@ -5,9 +5,11 @@ import { HomeComponent } from './home.component';
 import { HomePageComponent } from './modules/home-page/home-page.component';
 import { HomePageMainComponent } from './modules/home-page-main/home-page-main.component';
 import { ManageExpensesComponent } from './modules/manage-expenses/manage-expenses.component';
-import { ManageGoalsComponent } from './modules/manage-goals/manage-goals.component';
+import { ManageGoalsOutletComponent } from './modules/manage-goals-outlet/manage-goals-outlet.component';
+import { ManageGoalsComponent } from './modules/manage-goals-outlet/modules/manage-goals/manage-goals.component';
 import { AchievementsComponent } from './modules/achievements/achievements.component';
 import { GlossaryComponent } from './modules/glossary/glossary.component';
+import { StudentLoanComponent } from './modules/manage-goals-outlet/modules/student-loan/student-loan.component';
 
 const routes: Routes = [
     {
@@ -37,11 +39,27 @@ const routes: Routes = [
                         }
                     },
                     {
-                        path: 'manage-goals',
-                        component: ManageGoalsComponent,
+                        path: 'manage-goals-outlet',
+                        component: ManageGoalsOutletComponent,
                         data: {
-                            pageName: 'manage-goals'
-                        }
+                            pageName: 'manage-goals-outlet'
+                        },
+                        children: [
+                            {
+                                path: 'manage-goals',
+                                component: ManageGoalsComponent,
+                                data: {
+                                    pageName: 'manage-goals'
+                                }
+                            },
+                            {
+                                path: 'student-loan',
+                                component: StudentLoanComponent,
+                                data: {
+                                    pageName: 'student-loan'
+                                }
+                            }
+                        ]
                     },
                     {
                         path: 'glossary',

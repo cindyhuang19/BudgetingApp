@@ -20,10 +20,10 @@ export class HomePageMainComponent implements OnInit {
   }
 
   setGoals() {
-    this.router.navigate(['/home/manage-goals']);
+    this.router.navigate(['/home/manage-goals-outlet/manage-goals']);
   }
 
   achievements() {
-    this.router.navigate(['']);
+    this.router.navigate(['/home/achievements']);
   }
 }

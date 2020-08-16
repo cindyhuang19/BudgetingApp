@@ -1,0 +1,30 @@
+<div class="bodyContainer">
+    <h1 class="blackText" style="margin-top:50px; margin-bottom:35px"> You've picked <span class="blueText">Pay Back Student Loans </span>as your goal.</h1>
+    <div class="card">
+        <div class="card-body">
+            <div class="form-group">
+                <label for="loanDebt" class="blackTextSm col-6" style="float:left; margin-right: 20px">Please enter the amount of your loan debt: ($)</label>
+                <input name="loanDebt" type="number" class="form-control" id="loanDebt" [(ngModel)]="loanDebt" style="width:auto">
+            </div>
+            <div class="form-group">
+                <label for="interestRate" class="blackTextSm col-6" style="float:left; margin-right: 20px">What is the fixed interest rate? (%)</label>
+                <input name="interestRate" type="number" class="form-control" id="interestRate" [(ngModel)]="interestRate" style="width:auto">
+            </div>
+            <div class="form-group">
+                <label for="months" class="blackTextSm col-6" style="float:left; margin-right: 20px">In how many months do you want to repay the amount by? </label>
+                <input name="months" type="number" class="form-control" id="months" [(ngModel)]="months" style="width:auto">
+            </div>
+            <hr>
+            <button class="backBtn btn rounded-pill" type="button" color="primary" (click)="calculate()" style="float:right; margin-top:5px; width: auto"> Calculate </button>
+        </div>
+    </div>
+    <div *ngIf="calculated" style="margin: 20px">
+        <p class="blackTextSm"> In order to pay this <span class="blueTextSm">${{ loanDebt }}</span> loan back in <span class="blueTextSm">{{ months }}</span> months and at a fixed interest rate of <span class="blueTextSm">{{ interestRate }}%</span>, your monthly payment should be:</p>
+        <div class="card bg-light rounded-pill text-center">
+            <div class="card-body text-center">
+                <h2 class="blackText" style="font-weight: bold"> {{ payment }} </h2>
+            </div>
+        </div>
+    </div>
+    <button class="backBtn rounded-pill btn btn-block btn-sm float-right " style="margin: 20px;" type="button" (click)="backToGoals()"> Back </button>
+</div>

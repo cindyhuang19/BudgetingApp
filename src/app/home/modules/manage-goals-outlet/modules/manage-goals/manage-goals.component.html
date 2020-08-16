@@ -1,0 +1,76 @@
+<div class="bodyContainer">
+    <h1 class="blueText" style="margin-top:50px; margin-bottom:35px"> Goal Setting </h1>
+
+    <div class="d-flex flex-row justify-content-between" style="padding-bottom: 20px">
+        <div class="d-flex">
+            <form>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="salary" class="blackTextSm" style="float:left; margin-right: 20px">Your annual salary:</label>
+                            <input name="salary" type="number" class="form-control" id="salary" placeholder="Please enter annual salary" [(ngModel)]="salaryInput" style="width:auto">
+                        </div>
+                        <div class="form-group">
+                            <label for="period" class="blackTextSm" style="float:left; margin-right: 20px">Your salary period:</label>
+                            <input name="period" type="number" class="form-control" id="period" placeholder="Please enter salary period" [(ngModel)]="periodInput" style="width:auto">
+                        </div>
+                        <hr>
+                <p class="blueTextSm" style="float:left; padding-top: 5px;" *ngIf="updated"> Salary Updated! </p>
+                <button class="backBtn btn rounded-pill" type="button" color="primary" (click)="update()" style="float:right; margin-top:5px"> Update </button>
+                    </div>
+                </div>
+            </form> 
+        </div>
+        <div class="d-flex" style="padding-left: 20px;">
+            <div class="card" style="border-radius: 50px;">
+                <div class="card-body" style="padding-bottom: 10px;">
+                    <h3 class="blueText" style="padding: 10px; text-align: center;"> Your budget: </h3>
+                    <div class="card bg-light" style="border-radius:50px; margin: 10px auto;">
+                        <div class="card-body">
+                            <h4 class="blackText" style="text-align: center; font-weight: bold;"> $500 </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="d-block card">
+            <div class="card-body">
+                <div class="card-header">
+                    <h3 class="blackTextSm" style="margin:auto"> Select the goal:</h3>
+                </div>
+                <div class="d-flex flex-row justify-content-space-between" style="padding-top: 20px;">
+                    <div class="card" style="margin: 5px">
+                        <div class="card-body btn" (click)="payStudentLoan()">
+                            <img src="assets/images/loan.png" alt="loan" style="width:100%;">
+                            <h5 class="card-title" style="text-align: center;"> Pay Off Student Loans</h5>
+                        </div>
+                    </div>          
+                    <div class="card" style="margin: 5px"> 
+                        <div class="card-body">
+                            <img src="assets/images/card.png" alt="card" style="width:100%;">
+                            <h5 class="card-title" style="text-align: center;"> Pay Off Credit Card Debt</h5>
+                            <a href="#" class="btn stretched-link"></a>
+                        </div>
+                    </div>          
+                    <div class="card" style="margin: 5px">
+                        <div class="card-body">
+                            <img src="assets/images/car.png" alt="car" style="width:100%;">
+                            <h5 class="card-title" style="text-align: center;"> Buy a Car </h5>
+                            <a href="#" class="btn stretched-link"></a>
+                        </div>
+                    </div>          
+                    <div class="card" style="margin: 5px">
+                        <div class="card-body">
+                            <img src="assets/images/add.png" alt="add" style="width:100%;">
+                            <h5 class="card-title" style="text-align: center;"> Customize Your Goal </h5>
+                            <a href="#" class="btn stretched-link"></a>
+                        </div>
+                    </div>          
+                </div>  
+            </div>
+        </div>
+    </div>
+    <button class="backBtn rounded-pill btn btn-block btn-sm float-right " style="margin: 20px;" type="button" (click)="backToOptions()"> Back </button>
+</div>
