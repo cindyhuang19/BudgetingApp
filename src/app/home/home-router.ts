@@ -6,6 +6,8 @@ import { HomePageComponent } from './modules/home-page/home-page.component';
 import { HomePageMainComponent } from './modules/home-page-main/home-page-main.component';
 import { ManageExpensesComponent } from './modules/manage-expenses/manage-expenses.component';
 import { ManageGoalsComponent } from './modules/manage-goals/manage-goals.component';
+import { AchievementsComponent } from './modules/achievements/achievements.component';
+import { GlossaryComponent } from './modules/glossary/glossary.component';
 
 const routes: Routes = [
     {
@@ -39,6 +41,20 @@ const routes: Routes = [
                         component: ManageGoalsComponent,
                         data: {
                             pageName: 'manage-goals'
+                        }
+                    },
+                    {
+                        path: 'glossary',
+                        component: GlossaryComponent,
+                        data: {
+                            pageName: 'glossary'
+                        }
+                    },
+                    {
+                        path: 'achievements',
+                        component: AchievementsComponent,
+                        data: {
+                            pageName: 'achievements'
                         }
                     },
                 ]
