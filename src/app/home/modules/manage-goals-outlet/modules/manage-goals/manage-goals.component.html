@@ -8,11 +8,11 @@
                     <div class="card-body">
                         <div class="form-group">
                             <label for="salary" class="blackTextSm" style="float:left; margin-right: 20px">Your annual salary:</label>
-                            <input type="number" class="form-control" id="salary" placeholder="Please enter annual salary" [(ngModel)]="salaryInput" style="width:auto">
+                            <input name="salary" type="number" class="form-control" id="salary" placeholder="Please enter annual salary" [(ngModel)]="salaryInput" style="width:auto">
                         </div>
                         <div class="form-group">
                             <label for="period" class="blackTextSm" style="float:left; margin-right: 20px">Your salary period:</label>
-                            <input type="number" class="form-control" id="period" placeholder="Please enter salary period" [(ngModel)]="periodInput" style="width:auto">
+                            <input name="period" type="number" class="form-control" id="period" placeholder="Please enter salary period" [(ngModel)]="periodInput" style="width:auto">
                         </div>
                         <hr>
                 <p class="blueTextSm" style="float:left; padding-top: 5px;" *ngIf="updated"> Salary Updated! </p>

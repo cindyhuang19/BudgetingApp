@@ -24,6 +24,6 @@ export class HomePageMainComponent implements OnInit {
   }
 
   achievements() {
-    this.router.navigate(['']);
+    this.router.navigate(['/home/achievements']);
   }
 }
